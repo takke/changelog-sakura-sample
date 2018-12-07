@@ -24,7 +24,7 @@ build_script:
 # 以下、github に CHANGELOG.md をコミットするテスト
 # 下記は https://ci.appveyor.com/tools/encrypt で encrypt したトークン
 environment:
-  access_token: ($env:CHANGELOG_GITHUB_TOKEN)
+  access_token: $(CHANGELOG_GITHUB_TOKEN)
 #    secure: +75d7k/c1045wLgogW79eKsQKy5fmZvq7I0aJFfXz6Kdn9nm+jSLaxiMfupQQfIF
 
 on_success:
