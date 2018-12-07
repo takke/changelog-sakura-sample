@@ -18,3 +18,23 @@ build_script:
   - gem install github_changelog_generator
   - mkdir c:\tmp
   - github_changelog_generator -u sakura-editor -p sakura --exclude-labels duplicate,question,invalid,wontfix,CI,management,refactoring
+#  - github_changelog_generator -u takke -p changelog-sakura
+
+
+# 以下、github に CHANGELOG.md をコミットするテスト
+# 下記は https://ci.appveyor.com/tools/encrypt で encrypt したトークン
+environment:
+  access_token: $CHANGELOG_GITHUB_TOKEN
+#    secure: +75d7k/c1045wLgogW79eKsQKy5fmZvq7I0aJFfXz6Kdn9nm+jSLaxiMfupQQfIF
+
+on_success:
+#  - dir
+  - git config --global credential.helper store
+  - ps: Add-Content "$HOME\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "takke30.appveyor@gmail.com"
+  - git config --global user.name "appveyor"
+  - git add .
+  - git status
+  - git commit -m "[skip ci] AppVeyor Build %APPVEYOR_BUILD_VERSION%"
+  - git push origin HEAD:master
+#  - git status
