@@ -5,9 +5,9 @@ artifacts:
   - path: 'CHANGELOG.md'
 
 # gem install github_changelog_generator が毎回実行されないようにキャッシュする
-cache:
-  - C:/Ruby25/lib/ruby/gems/2.5.0/
-  - C:/Ruby25/bin
+#cache:
+#  - C:/Ruby25/lib/ruby/gems/2.5.0/
+#  - C:/Ruby25/bin
 
 build_script:
   - set PATH=C:\Ruby25\bin;%PATH%
