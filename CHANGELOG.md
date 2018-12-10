@@ -7,6 +7,7 @@
 **Implemented enhancements:**
 
 - ファイルの場所を管理者としてコマンドプロンプトを開く、に対応する [\#608](https://github.com/sakura-editor/sakura/issues/608)
+- 「エクスプローラーで開く」、「コマンドプロンプトを開く」等のコマンドのアイコンを対応する [\#607](https://github.com/sakura-editor/sakura/issues/607)
 - `ファイルの場所をコマンドプロンプトで開く`、および、`ファイルの場所をPowerShellで開く` を検討する [\#556](https://github.com/sakura-editor/sakura/issues/556)
 - エディタの各ドキュメントのタブ部分の右クリックメニューでエクスプローラを開く機能を検討する [\#420](https://github.com/sakura-editor/sakura/issues/420)
 - エクスプローラの右クリックメニューに、『SAKURAでGrep』を追加する [\#410](https://github.com/sakura-editor/sakura/issues/410)
@@ -19,6 +20,8 @@
 - ライセンスの話 [\#41](https://github.com/sakura-editor/sakura/issues/41)
 - sakura\_lang のプロジェクトを Visual Studio 2017 に更新する [\#20](https://github.com/sakura-editor/sakura/issues/20)
 - バージョン情報で git の commit hash を表示する [\#18](https://github.com/sakura-editor/sakura/issues/18)
+- Windows Imaging Component を使って背景画像を読み込み、透過描画対応 [\#683](https://github.com/sakura-editor/sakura/pull/683) ([beru](https://github.com/beru))
+- コマンドアイコンの追加 [\#680](https://github.com/sakura-editor/sakura/pull/680) ([berryzplus](https://github.com/berryzplus))
 - 「ファイルのプロパティ」ダイアログのエディットコントロールにTabStopを付ける [\#670](https://github.com/sakura-editor/sakura/pull/670) ([beru](https://github.com/beru))
 - `ファイルの場所を powershell で開く` に対応する [\#623](https://github.com/sakura-editor/sakura/pull/623) ([m-tmatma](https://github.com/m-tmatma))
 - 管理者としてコマンドプロンプトを開くメニュー項目を追加 [\#618](https://github.com/sakura-editor/sakura/pull/618) ([m-tmatma](https://github.com/m-tmatma))
