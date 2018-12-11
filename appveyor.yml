@@ -14,20 +14,14 @@ build_script:
   - ruby --version
   - where ruby
   - gem install github_changelog_generator
-  - github_changelog_generator -u sakura-editor -p sakura --exclude-labels duplicate,question,invalid,wontfix,CI,management,refactoring --cache-file %TEMP%\github-changelog-http-cache --cache-log %TEMP%\github-changelog-logger.log
-  #-no-issues-wo-labels
+  - github_changelog_generator -u sakura-editor -p sakura --exclude-labels duplicate,question,invalid,wontfix,CI,management,refactoring --cache-file %TEMP%\github-changelog-http-cache --cache-log %TEMP%\github-changelog-logger.log -no-issues-wo-labels
 
 
 # 以下、github に CHANGELOG.md をコミットするテスト
+# https://ci.appveyor.com/tools/encrypt で encrypt したトークンを指定している
 environment:
   CHANGELOG_GITHUB_TOKEN:
     secure: +75d7k/c1045wLgogW79eKsQKy5fmZvq7I0aJFfXz6Kdn9nm+jSLaxiMfupQQfIF
-#  access_token: $(CHANGELOG_GITHUB_TOKEN)
-
-# 下記は https://ci.appveyor.com/tools/encrypt で encrypt したトークンを指定する例
-#environment:
-#  access_token:
-#    secure: (encryptされたトークン)
 
 on_success:
   - git config --global credential.helper store
