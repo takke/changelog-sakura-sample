@@ -14,7 +14,7 @@ build_script:
   - ruby --version
   - where ruby
   - gem install github_changelog_generator
-  - github_changelog_generator -u sakura-editor -p sakura --exclude-labels duplicate,question,invalid,wontfix,CI,management,refactoring --cache-file %TEMP%\github-changelog-http-cache --cache-log %TEMP%\github-changelog-logger.log -no-issues-wo-labels
+  - github_changelog_generator -u sakura-editor -p sakura --exclude-labels duplicate,question,invalid,wontfix,CI,management,refactoring --cache-file %TEMP%\github-changelog-http-cache --cache-log %TEMP%\github-changelog-logger.log -issues-wo-labels
 
 
 # 以下、github に CHANGELOG.md をコミットするテスト
